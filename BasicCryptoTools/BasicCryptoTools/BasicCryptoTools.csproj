@@ -5,6 +5,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Ravi Khubchandani</Authors>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Description>Simple to use helper methods to generate Hashes, encrypt/decrypt AES256 and encode/decode Base64 files and strings. See how to use here https://github.com/ravikhubchandani/basic-crypto-tools/blob/master/BasicCryptoTools/Test/Program.cs</Description>
   </PropertyGroup>
 
   <ItemGroup>
