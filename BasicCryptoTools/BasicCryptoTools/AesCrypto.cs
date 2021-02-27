@@ -27,9 +27,6 @@ namespace BasicCryptoTools
 
         public FileInfo EncryptFile(FileInfo input, string password, params string[] output)
         {
-            if (output == null || output.Length == 0)
-                throw new System.Exception("No output path specified");
-
             var bytes = _mgr.ReadBinaryFile(input);
             var encryptedBytes = Encrypt(bytes, password);
             return _mgr.WriteBinaryFile(Path.Combine(output), encryptedBytes, true);
@@ -37,9 +34,6 @@ namespace BasicCryptoTools
 
         public FileInfo DecryptFile(FileInfo input, string password, params string[] output)
         {
-            if (output == null || output.Length == 0)
-                throw new System.Exception("No output path specified");
-
             var bytes = _mgr.ReadBinaryFile(input);
             var decryptedBytes = Decrypt(bytes, password);
             return _mgr.WriteBinaryFile(Path.Combine(output), decryptedBytes, true);
